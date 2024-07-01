@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,
+100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <h1>My Library</h1>
+        <div class="buttons">
+            <button class="btn" id="btn-new-book">+ Add Book</button>
+            <button class="btn" id="btn-login">Log In</button>
+        </div>
+    </div>
+
+    <div class="book-container">
+    </div>
+
+    <dialog>
+        <div class="newBookModal">
+            <div class="close-btn-container"><button class="close-btn" id="closeBtn">X</button></div>
+            <form class="add-book-form">
+                <div><h1 class="modal-title">New Book</h1></div>
+                <input class=input type=text id="title" maxlength=100 placeholder="Title" required>
+                <input class=input type=text id="author" maxlength=100 placeholder="Author" required>
+                <input class=input type=number id="pages" maxlength=6 placeholder="Pages" required>
+                <div class="isRead">
+                    <input class="checkbox" type="checkbox" id="isRead">
+                    <label for="isRead">Have you read it?</label>
+                </div>
+                <button class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </dialog>
+
+    <div class="footer">
+        <p class="copyright">Copyright © 
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Nirmit651</p>
+    </div>
+    
+</body>
+</html>
