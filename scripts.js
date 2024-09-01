@@ -9,6 +9,7 @@ class Book {
 
 function addBooktoLibrary(e){
     e.preventDefault();
+
     let newBook = new Book(document.getElementById('title').value, 
                         document.getElementById('author').value, 
                         document.getElementById('pages').value, 
@@ -115,7 +116,14 @@ const form = document.querySelector('form');
 let renderNumber = myLibrary.length - 1;
 
 addBookButton.addEventListener("click", (e) => {
-    addBooktoLibrary(e);
+    
+    addBookButton.addEventListener("click", (e) => {
+    if (form.checkValidity()) {
+        addBooktoLibrary(e);
+    } else {
+        form.reportValidity();
+    }
+});
     console.log(myLibrary);
 });
 
